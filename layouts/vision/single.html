@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+			{{ "<!-- Main -->" | safeHTML }}
+				<section id="main" class="container">
+					<header> 
+						<h2>{{ .Params.title }}</h2>
+						{{ with .Params.subtitle }}<p style="display:flex !important; justify-content:center !important;">{{ . }}</p>{{ end }}
+					</header>
+					<div class="box-mision">
+						{{ with .Params.images }}
+							<span class="image featured"><img src="{{ index . 0 | absURL }}" alt=""></span>
+						{{ end }}
+						{{ .Content }}
+						
+						
+					</div>
+				</section>
+{{ end }}

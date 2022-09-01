@@ -1,0 +1,76 @@
+
+{{ define "main" }}
+			{{ "<!-- Main -->" | safeHTML }}
+            
+				<section id="main" class="container">
+					<header>
+						<h2>{{ .Params.title }}</h2>
+						{{ with .Params.passage }}<p>{{ . }}</p>{{ end }}
+					</header>
+						<nav class="prev-next-image">
+							{{ with .PrevInSection -}}
+								<!--<a class="button small alt" href="{{ .Permalink }}" >
+									Read more<i class="fas fa-angle-double-right"></i>
+								</a>-->
+								<a class="button small alt prev" href="{{ .RelPermalink }}">
+									<i class="fas fa-arrow-left"></i>
+									<span class="prev-text nav-default">{{ .Title }}</span>
+									<span class="prev-text nav-mobile">{{ T "prevPost" }}</span>
+									
+								</a>
+							{{- end }}
+					
+
+							{{ with .NextInSection -}}
+								
+								<a class="button small alt next" href="{{ .RelPermalink }}">
+									<span class="next-text nav-default">{{ .Title }}</span>
+									<span class="next-text nav-mobile">{{ T "nextPost" }}</span>
+									<i class="fas fa-arrow-right"></i>
+								</a>
+							{{- end }}
+						</nav>
+						
+					
+					<div class="box">
+						<div class="row">
+							<div class="col-8 col-12-mobilep">
+							{{ with .Params.images }}
+								<span class="image fit"><img src="{{ index . 0 | absURL }}" alt=""></span>
+							{{ end }}
+
+							{{ with .Params.videos }}
+								<iframe 
+									width="560" 
+									height="315" 
+									src="{{ index . 0 | absURL }}" 
+									title="YouTube video player" 
+									frameborder="0" 
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+									allowfullscreen>
+								</iframe>
+							{{ end }}
+							</div>
+							<div class="col-4 col-12-mobilep">
+                               
+                                {{ .Content }}
+                                
+                                {{ if .Params.tags }}
+                                    <p>Topics:
+                                        {{ range $index, $key:= .Params.tags }}
+                                            {{ if $index }}, {{ end }}
+                                            {{ if gt (len $key) 0 }}
+                                            <a href="/tags/{{$key | urlize }}/">#{{ $key }}</a>
+                                                {{ end }} {{/* if gt len */}}
+                                            {{ end }} {{/* range */}}
+                                    </p>
+                                {{ end }} {{/* end if tags */}}
+                                {{ with .Params.date }}<p>Date: {{ . | dateFormat "January 2, 2006"}}</p>{{ end }}
+                            </div>
+						</div>
+					</div>
+
+					
+					
+				</section>
+{{ end }}

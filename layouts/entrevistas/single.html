@@ -1,0 +1,14 @@
+{{ define "main" }}
+			{{ "<!-- Main -->" | safeHTML }}
+            <section id="main" class="container-bigger">
+                <header>
+                    <h2>{{ .Params.title }}</h2>
+                    {{ with .Params.passage }}<p>{{ . }}</p>{{ end }}
+                </header> 
+                <div class="box">
+                    <p class="content-interview">{{ .Content }}</p> 
+                </div>
+            </section>
+{{ end }}
+       
+                

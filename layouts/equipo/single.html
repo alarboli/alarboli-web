@@ -1,0 +1,53 @@
+{{ define "main" }}
+	{{ "<!-- Main -->" | safeHTML }}
+	<section id="main" class="container">
+	 <!--
+      <div class="row no-collapse 50% uniform">
+        <div class="col-12 col-12-mobilep">
+          <span class="image fit">
+            <a href="{{ .Permalink }}">
+              <img src="{{ index .Params.images 1 | absURL }}"></img>
+            </a/>
+          </span>
+          {{ .Content }}
+        </div>
+
+     -->  
+      
+        <div class="row no-collapse 50% uniform">
+          
+          <div class="col-12 col-12-mobilep">
+            <div>
+              <h3 style="font-weight: 600;" href="{{ .Permalink }}">{{ .Title | markdownify }}</h2>
+              <img class="image fit-single" src="{{ index .Params.images 1 | absURL }}" />
+              <p> {{ .Content | safeHTML }}</p>
+                
+              
+            </div>
+            <!--
+              <div class="image fit">
+              <span class="">
+                <a href="{{ .Permalink }}">
+                  
+                </a/>
+
+              </span>
+              
+              
+            </div>
+            
+            -->
+            
+          </div>
+          
+        
+    </div>
+              
+    </div>
+    <hr />
+      
+		
+	</section>
+{{ end }}
+
+

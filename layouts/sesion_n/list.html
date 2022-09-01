@@ -1,0 +1,42 @@
+{{ define "main" }}
+	{{ "<!-- Main -->" | safeHTML }}
+	<section id="main" class="container">
+	  <header>
+      <a class="back-sesion" href='{{ "/proyectos/sesiones/" | relURL }}'>← Volver a sesiones</a>
+	    <h2>{{ .Title | title }}</h2>
+		  
+	  </header>
+
+    
+      <p> {{ .Content }} </p>
+      {{ $pages := .Paginator.Pages }}
+      {{ $len := (len $pages) }}
+	  {{ template "partials/pagination.html" . }}
+      <div class="row no-collapse 50% uniform">
+		{{ range (.Paginate ( first 11 .Pages.ByWeight.Reverse )).Pages }}
+            <div class="col-10 col-12-mobilep">
+              <div class="video-item-sesion">
+                <span class="image fit">
+                    <img src="{{ index .Params.images 0 | absURL }}"></img>
+                  
+
+                </span>
+              
+                <div class="video-caption">
+                    <p style="color: black; text-align: center;" class=""> {{ .Summary | plainify | safeHTML | truncate 300 }}</p>
+                    
+                </div>
+              </div>
+            </div>
+           {{ end }}
+      </div>
+              
+    </div>
+    <hr />
+    
+      
+		
+	</section>
+{{ end }}
+
+

@@ -1,0 +1,38 @@
+{{ "<!-- Footer -->" | safeHTML}}
+  <footer id="footer">
+    <ul class="icons">
+      {{ range .Site.Params.links }}
+      {{ $pack := or .icon_pack "fa" }}
+        <li>
+          <a href="{{ .link | safeURL }}" target="_blank" aria-label="{{ .service }}"><i class="icon {{ $pack }} {{ .icon }}"><span class="label">{{ .service }}</span></i></a>
+        </li>
+      {{ end }} {{/* range */}}
+    </ul>
+
+    <div class="logo-section">
+      <img src="{{ .Site.Params.Footer.logo_footer }}" class="logo" />
+    
+    </div>	
+          
+
+    <ul class="copyright">
+      <div class="center">
+        <p xmlns:cc="http://creativecommons.org/ns#" >
+          Este trabajo tiene licencia bajo 
+          <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref= selector-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block; margin-left: 0.5em; margin-top:-0.3em">CC BY-NC-ND 4.0
+            <img style="height:22px!important;margin-left:3px ;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">
+            <img style="height:22px!important;margin-left:3px;vertical-align:text -abajo;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
+            <img style="height:22px!important;margin-left:3px;vertical-align:text -abajo;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"> 
+            <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1">
+          </a>
+        </p>
+      </div>
+      
+    
+      {{- range .Site.Params.Footer.copyright -}}
+      <li>{{ . }}</li>
+      {{- end -}}
+    </ul>
+  </footer>
+
+</div>

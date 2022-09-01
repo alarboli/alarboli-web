@@ -1,0 +1,45 @@
+{{ define "main" }}
+	{{ "<!-- Main -->" | safeHTML }}
+	<section id="main" class="container">
+	  <header>
+	    <h2 style="margin-bottom: 0.2em !important;">{{ .Title  }}</h2>
+		  <p style="font-size:19px !important;"> {{ .Params.description }} </p>
+      <h4 style="text-align: center;">{{ .Params.subdescription }} </h4>
+	  </header>
+
+    
+	  	
+      {{ $pages := .Paginator.Pages }}
+      {{ $len := (len $pages) }}
+      <div class="row no-collapse 50% uniform">
+          {{ range .Pages.ByDate }}
+            <div class="col-4 col-12-mobilep">
+              <div class="video-item-interview">
+                <span class="image fit">
+                  <a href="{{ .Permalink }}">
+                    <img src="{{ index .Params.images 0 | absURL }}"></img>
+                  </a/>
+
+                </span>
+              
+                <div class="video-caption">
+                  <a style="text-align: center; justify-content: center !important;" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+                    <p style="font-style: italic;" class="subtitle-video">{{ with .Params.subtitle }} {{ .  }}  {{ end }}</p>
+                    {{ with .Params.passage }} | {{ . | markdownify }} | {{ end }}
+                  
+                </div>
+              </div>
+            </div>
+           {{ end }}
+      </div>
+      <p>{{ .Content }}</p>
+    </div>
+
+    
+    <hr />
+
+		
+	</section>
+{{ end }}
+
+

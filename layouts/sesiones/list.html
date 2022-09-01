@@ -1,0 +1,55 @@
+{{ define "main" }}
+	{{ "<!-- Main -->" | safeHTML }}
+	<section id="main" class="container-bigger">
+	  <header>
+      <h2>{{ .Title }}</h2>
+    </header>
+  
+    {{ $pages := .Paginator.Pages }}
+      {{ $len := (len $pages) }}
+      <div class="row no-collapse 50% uniform">
+        
+            <div class="col-5 col-12-mobilep">
+              <p class="sesion-text">{{ .Content }}</p>
+	  
+              
+            </div>
+            <div class="col-7 col-12-mobilep"> 
+              
+              <div class="row no-collapse 50% uniform">
+                {{ range .Pages.ByDate }}
+           
+                <div class="col-4 col-6-narrower col-12-mobilep">
+                  <div style="text-align:center;" class="video-caption">
+                    <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+                      {{ with .Params.subtitle }} | {{ . | markdownify }} | {{ end }}
+                      {{ with .Params.passage }} | {{ . | markdownify }} | {{ end }}
+                    
+                  </div>
+                    <div class="video-item">
+                      <span class="image fit">
+                        <a href="{{ .Permalink }}">
+                          <img src="{{ index .Params.images 0 | absURL }}"></img>
+                        </a/>
+      
+                      </span>
+                      
+                    </div>
+                    
+                  </div>
+                  {{ end }}   
+              </div>
+              
+            </div> 
+          
+      </div>
+              
+    </div>
+    
+    {{ template "_internal/pagination.html" . }}
+      
+		
+	</section>
+{{ end }}
+
+

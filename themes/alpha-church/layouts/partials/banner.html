@@ -1,0 +1,12 @@
+<section id="banner">
+    <img class="img-logo-banner" src="img/Logotipo.png" />
+    <h2 class="title">{{ .Site.Params.title }}</h2>
+    <!--<p class="subtitle">{{ .Site.Params.subtitle }}</p>-->
+    <ul class="actions special">
+      {{ range .Params.Banner.button }}
+        <li ><a href="{{ .url | relURL }}" class="button {{ .type }}">{{ .text }}</a></li>
+      {{ end }}
+    </ul>
+  
+  
+</section>

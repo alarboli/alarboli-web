@@ -1,0 +1,55 @@
+{{ define "main" }}
+	{{ "<!-- Main -->" | safeHTML }}
+	<section id="main" class="container">
+	  <header>
+	    <h2>EQUIPO</h2>
+		  <p>{{ .Params.description }}</p>
+	  </header>
+
+    
+	  {{ $pages := .Paginator.Pages }}
+      {{ $len := (len $pages) }}
+      {{ range .Pages.ByWeight }}
+      <div class="row no-collapse 50% uniform">
+          
+            <div class="col-4 col-12-mobilep">
+              <div class="image-item">
+                <span class="">
+                  <a href="{{ .Permalink }}">
+                    <img src="{{ index .Params.images 0 | absURL }}"></img>
+                  </a/>
+
+                </span>
+              
+                
+              </div>
+            </div>
+            <div class="col-8 col-12-mobilep"> 
+             
+              <div class="video-caption">
+                <a  href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+                  <p class="rol">{{ .Params.rol }} </p>
+                  <p>{{ .Summary | plainify | safeHTML | truncate 300 }}</p>
+                  {{ if .Truncated }} 
+                    <a class="see-more-btn" href="{{ .Permalink }}" >
+                        <button class="button small alt">Leer más <i class="fas fa-angle-double-right"></i></button>
+                    </a>
+                  {{ end }} {{/* if */}}
+                  {{ with .Params.subtitle }} | {{ . | markdownify }} | {{ end }}
+                  {{ with .Params.passage }} | {{ . | markdownify }} | {{ end }}
+                
+              </div>
+            </div>
+              
+            
+           
+      
+              
+    </div>
+    {{ end }}
+    <hr />
+
+      
+		
+	</section>
+{{ end }}

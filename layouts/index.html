@@ -1,0 +1,139 @@
+{{ partial "header" . }}
+{{ partial "nav" . }}
+{{ partial "banner" . }}
+			
+
+			{{ "<!-- Main -->" | safeHTML }}
+
+				<section id="main" class="container">
+
+					{{ if .Params.Services.title }}
+					<section class="box margin-banner">
+						<header class="major">
+							<div 
+							data-aos="fade-up"
+							data-aos-offset="200"
+							data-aos-delay="50"
+							data-aos-duration="1000"
+							data-aos-easing="ease-in-out"
+							data-aos-mirror="true"
+							data-aos-once="false"
+							data-aos-anchor-placement="top-center"
+							> 
+								<h2 >{{ .Params.Services.title }}</h2><a name="services"></a>
+							
+							</div>
+							<div	
+								data-aos="fade-up"
+								
+							>
+								<p>{{ .Params.Services.text | markdownify }}</p>
+							</div>
+							
+						</header>
+						
+					</section>
+					{{ end }}
+					
+					<div class="">
+						{{ if .Params.Main_image.enable }}
+
+						<section class="main-image" >
+							<h2 style="text-align:center; font-weight: 600; padding-top:0.5em; font-size:35px !important;"> {{ .Params.Main_image.title}} </h2>
+							<h4 style="text-align:center; font-weight: 500; font-size: 22px;"> {{ .Params.Main_image.description }} </h4>
+							<img class="main-image-index" src="{{ .Params.Main_image.image }}" title="{{ .Params.Main_image.title }}" />
+						</section>
+					{{ end }}
+
+					</div>
+					
+					<hr class="divider"></hr>
+
+					{{ if .Params.Feature_icons.enable }}
+						{{ $tiles := .Params.Feature_icons.tile }}
+						{{ $len := (len $tiles) }}
+						<a name="feature-icons" ></a>
+						<section class="box special features " data-aos="fade-up">
+							<div class="features-row">
+								{{ range $index, $key := $tiles}}
+									<section>
+										{{ if $key.url }}<a href="{{ $key.url | absURL }}"><div>{{ end }}
+											<span class="icon major {{ $key.icon_pack }} {{ $key.icon }} accent{{- $key.accent -}}"></span>
+											<h3>{{ $key.title }}</h3>
+											<p>{{ $key.text | markdownify }}</p>
+										{{ if $key.url }}</div></a>{{ end }}
+									</section>
+									{{ if and (mod $index 2) (lt (add $index 1) $len) }}
+											</div>
+											<div class="features-row">
+									{{ end }}
+								{{ end }}
+							</div>
+
+							
+						</section>
+					{{ end }}
+
+					</section>
+					
+					
+						
+					</div>
+
+						
+					
+					<div class="container">
+						<h2 class="news-title">Novedades</h2>
+						{{ if .Params.Feature_images.enable }}
+						{{ $tiles := .Params.Feature_images.tile }}
+						{{ $len := (len $tiles) }}
+						<a name="feature-images"></a>
+						<div class="row margin-icons" >
+							{{ range $index, $key := $tiles }}
+								<div class="col-6 col-12-narrower">
+									<section class="box special">
+										<span class="image featured"><a href="{{ $key.url | absURL }}"><img src="{{ $key.image | absURL}}" alt="" /></span></a>
+										<h3>{{ $key.title }}</h3>
+										<p>{{ $key.text | markdownify }}</p>
+										{{ if $key.button_text }}
+											<ul class="actions special">
+												<li><a href="{{ $key.url | absURL }}" class="button alt">{{ $key.button_text }}</a></li>
+											</ul>
+											{{ end }}
+										</section>
+									</div>
+									{{ if and (mod $index 2) (lt (add $index 1) $len) }}
+										</div>
+										<div class="row">
+									{{ end }}
+							{{ end }} {{/* end range $tiles*/}}
+										</div>
+										<div style="display: flex; justify-content: center;">
+											<a class="button alt" href="/noticias">Ver más noticias </a>
+			
+										</div>
+												
+					{{ end }} {{/* end if Feature_images*/}}
+
+				</div>	
+				
+					
+				
+					
+				<!--
+					{{ "" | safeHTML }}
+				<section id="cta"><a name="call-to-action" ></a>
+					<div data-aos="fade-right">
+						<h2>{{ .Params.CTA.heading}}</h2>
+						<p>{{ .Params.CTA.message}}</p>
+						{{ partial "contact" .}}
+
+					</div>
+					
+				</section>
+
+				-->
+				
+			
+{{ partialCached "footer" . }}
+{{ partial "scripts" . }}
