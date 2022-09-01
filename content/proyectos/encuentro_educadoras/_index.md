@@ -7,7 +7,7 @@ images: ["/img/proyectos/encuentro_educadoras/1.jpg","/img/proyectos/encuentro_e
 ---
 
 Este encuentro fue realizado el 3 de diciembre del año 2021 en Parque Urbano el Bosque de Valdivia, Región de los Ríos, Chile.
-Se abordaron tres temas, los cuales, invitaron al diálogo y a la reflexión entre educador@s.
+Se abordaron tres temas, los cuales, invitaron al diálogo y a la reflexión entre educadoras.
 - ***“Integrando experiencias educativas dentro y fuera del aula, en la educación parvularia”***, por Claudia Contreras Maldonado de Club del Bosque Valdiviano. 
 (http://www.clubdelbosquevaldiviano.cl/)
 
@@ -17,8 +17,8 @@ Se abordaron tres temas, los cuales, invitaron al diálogo y a la reflexión ent
 
 De igual manera se realizó una exposición de la documentación realizada por el equipo pedagógico de ALARBOLÍ en el proyecto “Los árboles en mi infancia” y una muestra de los materiales utilizados en las sesiones del proyecto.
 
-El principal objetivo de este encuentro fue favorecer la colaboración entre educador@s permitiendo potenciar el desarrollo de experiencias significativas al aire libre con niñas y niños de la Región de los Ríos, de igual manera compartir experiencias y reflexionar sobre nuestra práctica pedagógica.
-El encuentro entre educador@s fue gratificante y se espera a futuro seguir trabajando en este tipo de iniciativas, promoviendo la generación de lazos e ir creciendo colaborativamente entre los diversos proyectos educativos de la región.
+El principal objetivo de este encuentro fue favorecer la colaboración entre educadoras/es permitiendo potenciar el desarrollo de experiencias significativas al aire libre con niñas y niños de la Región de los Ríos, de igual manera compartir experiencias y reflexionar sobre nuestra práctica pedagógica.
+El encuentro entre educadoras/es fue gratificante y se espera a futuro seguir trabajando en este tipo de iniciativas, promoviendo la generación de lazos e ir creciendo colaborativamente entre los diversos proyectos educativos de la región.
 
 
 <div style="margin-top:3em"></div>

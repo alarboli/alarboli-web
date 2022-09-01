@@ -19,7 +19,8 @@ Agradecemos a cada profesional entrevistado por la disposición y colaboración 
 - Edición videos: Marco Roa
 - Música videos: Para ir (Camilo Eque)
 - Material Audiovisual: Paola Muñoz de Arte Valdivia (https://www.artevaldivia.cl/), Francisco Levín.
-
+- Redacción: Paz Tobar Contreras, Millaray Villanueva Velásquez.
+- Subtítulos Inglés- Español: Constanza Peña Barahona.
 <div style="margin-top:2em;"></div>
 
 

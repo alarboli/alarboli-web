@@ -1150,6 +1150,8 @@
 
 		li {
 			padding-left: 0.5em;
+			text-align: justify;
+  			text-justify: inter-word;
 		}
 
 		&.alt {
@@ -3035,7 +3037,7 @@
 				height: 230px; 
 				overflow: hidden; 
 				border-radius: 50%;
-				margin-left: 3.5em; 
+				margin-left: 5.5em; 
 			} 
 			.image-item img { 
 				width: 100%; 
@@ -3050,7 +3052,7 @@
 				height: 280px; 
 				overflow: hidden; 
 				border-radius: 50%;
-				margin-left: 3em; 
+				margin-left: 4em; 
 			} 
 			.image-item-bigger img { 
 				width: 100%; 

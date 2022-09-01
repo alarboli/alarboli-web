@@ -1,6 +1,6 @@
 ---
 title: "Pete Moorhouse"
-subtitle: '"La Naturaleza Promueve la Exploración y el Descubrimiento a Niñas y Niños"'
+subtitle: '"La naturaleza promueve la exploración y el descubrimiento en la infancia"'
 date: 2022-05-25T13:38:20-03:00
 draft: false
 images: ["/img/entrevistas/pete-moorhouse.png"]

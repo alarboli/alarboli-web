@@ -1,13 +1,13 @@
 ---
 title: "Paula Müller Espinoza"
-rol: "Fundadora"
+rol: "Fundadora y Directora"
 weight: 1
 date: 2022-07-28T01:38:23-04:00
 draft: true
 images: ["/img/equipo/paula-muller2.jpg","/img/equipo/paula-muller-recortada2.jpg"]
 ---
 
-Paula es Ingeniera en Maderas titulada de la Facultad de Ciencias Forestales de la Universidad Austral de Chile (UACh), Valdivia. Licenciada en Educación y profesora de Educación Técnico Profesional, de la misma casa de estudios superiores. Actualmente cursa un Diplomado en FEHN Forest School Chile - Educación Holística en la Naturaleza.
+Paula es Ingeniera en Maderas titulada de la Facultad de Ciencias Forestales de la Universidad Austral de Chile (UACh), Valdivia. Licenciada en Educación y Profesora de Educación Técnico Profesional, de la misma casa de estudios superiores. Actualmente cursa un Diplomado en FEHN Forest School Chile - Educación Holística en la Naturaleza.
 
 Durante su camino, Paula ha realizado talleres y cursos ligados a la educación medioambiental y a diferentes pedagogías activas, asimilando valores y principios pedagógicos de los cuales se destacan; Fröbel, Dewey, Steiner, Montessori y Malaguzzi con su reconocido enfoque, Reggio Emilia. Este último le ha permitido conocer otra visión de la infancia, en donde, la escucha activa, la colaboración, la documentación y la investigación educativa toman un rol fundamental en el proceso de desarrollo de la niñez. “Me sorprende gratamente la simplicidad que tiene el juego libre en la infancia y la profundidad que puede llegar a alcanzar en el desarrollo humano” enfatizó.
 

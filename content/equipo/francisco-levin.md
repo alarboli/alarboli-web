@@ -4,7 +4,7 @@ rol: "Coordinador de Sistemas"
 weight: 5
 date: 2022-07-28T01:38:39-04:00
 draft: false
-images: ["/img/equipo/francisco-levin1.jpg", "/img/equipo/francisco-levin1.jpg"]
+images: ["/img/equipo/francisco-levin1.jpg", "/img/equipo/francisco-levin1-recortada.jpg"]
 rol: "Coordinador de Sistemas Informáticos"
 ---
 
@@ -15,5 +15,4 @@ A lo largo de su vida, ha estado ligado a la música, de maneral especial a la g
 Desde pequeño practicó diversos deportes, tales como fútbol, básquetbol, natación y ajedrez. Sin embargo, al que ha dedicado mayor energía desde los 15 años es al atletismo, influyendo en el logro de sus habilidades y objetivos hasta hoy. Practicando este deporte, ha podido conocer personas de intereses afines, viajar por distintos lugares de Chile y desarrollar perseverancia, responsabilidad, fraternidad y, por sobre todo, resiliencia.
 
 “El atletismo permitió acercarme a la naturaleza y al juego al aire libre, me hizo apreciar lo importante que es esto para desarrollo de las diversas habilidades, tanto cognitivas como físicas en los niños, niñas y jóvenes” mencionó.
-
 Actualmente, se encuentra desarrollando diversas herramientas informáticas para ALARBOLÍ, otorgando apoyo constante en todas las áreas que requieran una perspectiva tecnológica y humana.

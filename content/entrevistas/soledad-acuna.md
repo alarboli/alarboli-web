@@ -1,6 +1,6 @@
 ---
 title: "Soledad Acuña Arrieta"
-subtitle: '"Factor de Relevancia en el Desarrollo de la Imaginación durante la Primera Infancia"'
+subtitle: '"Factores de relevancia en el desarrollo de la imaginación durante la primera infancia"'
 date: 2022-05-25T13:38:20-03:00
 draft: false
 images: ["/img/entrevistas/soledad-acuna.png"]
