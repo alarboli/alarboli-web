@@ -1,4 +1,4 @@
-baseURL = "https://alarboli.github.io/"
+baseURL = "https://www.alarboli.org/"
 languageCode = "en-us"
 title = "Alarbolí"
 theme = ["alpha-church"]
