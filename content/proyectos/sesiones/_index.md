@@ -1,5 +1,5 @@
 ---
-title: "Los Árboles en mi infancia"
+title: "Los árboles en mi infancia"
 date: 2021-08-04T17:05:39-04:00
 description: ""
 image: "/img/sesion1/2.jpg"
@@ -25,7 +25,7 @@ En la documentación expuesta se dan a conocer, frases y palabras expresadas por
 
 Fotografías: Paola Muñoz de Arte Valdivia https://www.artevaldivia.cl/
 
-Agradecemos a las niñas y niños que participaron de este proyecto, asi como a sus familias que apoyaron semanalmente a sus hijos en este proceso.
+Agradecemos a las niñas y niños que participaron de este proyecto, así como a sus familias que apoyaron semanalmente a sus hijos en este proceso.
 
 <div style="margin-top: 50px;"></div>
 

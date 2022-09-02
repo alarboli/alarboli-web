@@ -3,7 +3,7 @@ title: "PROYECTOS"
 description: "ALARBOLÍ"
 
 cascade:
-- type: "sesion_n"
+- type: "sesion_inside"
   _target: 
     path: "/proyectos/sesiones/sesion**/**"
 
