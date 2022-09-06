@@ -26,12 +26,13 @@
             <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1">
           </a>
         </p>
+        {{- range .Site.Params.Footer.copyright -}}
+      <li style="text-align: center;">{{ . }}</li>
+      {{- end -}}
       </div>
       
     
-      {{- range .Site.Params.Footer.copyright -}}
-      <li>{{ . }}</li>
-      {{- end -}}
+      
     </ul>
   </footer>
 

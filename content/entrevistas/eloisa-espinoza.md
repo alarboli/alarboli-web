@@ -1,5 +1,5 @@
 ---
-title: "Eloisa Espinoza Inostroza"
+title: "Eloísa Espinoza Inostroza"
 subtitle: '"Aprendizajes y la activa participación de la comunidad como estrategia pedagógica"'
 date: 2022-01-25T13:30:13-03:00
 draft: false

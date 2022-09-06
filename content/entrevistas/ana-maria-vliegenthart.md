@@ -1,5 +1,5 @@
 ---
-title: "Ana Maria Vliegenthart Arntz"
+title: "Ana María Vliegenthart Arntz"
 subtitle: '"La Educación ambiental al aire libre como una estrategia didáctica para crear consciencia en las niñas y niños sobre la importancia de nuestro planeta"'
 date: 2022-01-25T13:39:35-03:00
 draft: false
