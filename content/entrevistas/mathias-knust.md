@@ -1,5 +1,5 @@
 ---
-title: "Mathias Knust Dragunski"
+title: "Matías Knust Dragunski"
 subtitle: '"Educación en la naturaleza y resolución de problemas de manera colaborativa"'
 date: 2022-01-25T13:29:19-03:00
 draft: false
@@ -8,7 +8,7 @@ images: ["/img/entrevistas/mathias-knust.png"]
 type: ["video/mp4"]
 ---
 
-Matias Knust, Magíster en Sociología de la Infancia de la Universidad de Ciencias y Tecnología de Noruega. Co-fundador y Director de la Fundación CIFREP. Ha colaborado para mejorar los resultados de aprendizaje en escuelas vulnerables en Chile trabajando como investigador en el equipo AILEM-UC, Universidad donde también ha sido profesor de Educación Parvularia. Profesor invitado en la Universidad de Magallanes y en la Universidad de O'Higgins. 
+Matías Knust, Magíster en Sociología de la Infancia de la Universidad de Ciencias y Tecnología de Noruega. Co-fundador y Director de la Fundación CIFREP. Ha colaborado para mejorar los resultados de aprendizaje en escuelas vulnerables en Chile trabajando como investigador en el equipo AILEM-UC, Universidad donde también ha sido profesor de Educación Parvularia. Profesor invitado en la Universidad de Magallanes y en la Universidad de O'Higgins. 
 
 Trabaja como consultor para la niñez en Honduras y Nicaragua. Fue invitado como Embajador de Chile representando a la Fundación CIFREP en el Congreso Internacional de las Escuelas en la Naturaleza desarrollado en Suiza y del Summerhill Festival of Childhood de Inglaterra. En 2019 expuso ante la Comisión de Educación de la Cámara de Diputados de Chile sobre la importancia de la educación al aire libre para el desarrollo de niños y niñas.
 
