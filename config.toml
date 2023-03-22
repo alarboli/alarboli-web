@@ -105,7 +105,7 @@ enableInlineShortcodes = true
     #lge = "example96.png"
 
   [params.banner]
-    image = "/img/banner_inicio2.jpeg"
+    image = "/img/principal.JPG"
 
   [params.middle_image]
     image = "img/banner_inicio3.jpeg"
