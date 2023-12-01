@@ -12,7 +12,7 @@ Es educadora en la naturaleza certificada en Reino Unido como líder nivel 3 en 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/744592550?h=3e1e2febba&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="ENTREVISTA ALARBOL&amp;Iacute;                     Paula Araneda (Kawansh Bosque Escuela)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 <div style="margin-bottom:1em"></div>
 
-- [Web Bosque Escuela](www.bosqueescuela.cl) 
+- [Web Bosque Escuela](https://bosqueescuela.cl/) 
 
 - [@bosque_ escuela](https://www.instagram.com/bosque_escuela/)
  

@@ -18,4 +18,5 @@ El concepto de aldea para ella, siempre fue volver a la comunidad â€œa la tribuâ
 
 
 - [Cuenta de Twitter](https://twitter.com/aldeabosque?lang=en)  
+- [Cuenta de Instagram](https://www.instagram.com/aldeabosquechiloe/)
 - [Cuenta de Facebook](https://www.facebook.com/aldeabosquechiloe)
