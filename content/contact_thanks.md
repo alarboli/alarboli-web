@@ -1,5 +1,6 @@
 ---
 title: "Gracias por contactarnos"
+type: "contact_thanks"
 subtitle: ""
 date: 2018-05-12T13:38:38+10:00
 images: ["img/banner_inicio.jpeg"]

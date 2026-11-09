@@ -1,5 +1,6 @@
 ---
 title: "ALARBOLÍ"
+type: "vision"
 subtitle: "Abrazando los Árboles en mi Infancia"
 date: 2022-07-27T13:37:50-04:00
 draft: false

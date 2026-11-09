@@ -1,45 +1,15 @@
 {{ define "main" }}
-	{{ "<!-- Main -->" | safeHTML }}
-	<section id="main" class="container">
-	  <header>
-	    <h2 style="margin-bottom: 0.2em !important;">{{ .Title  }}</h2>
-		  <p style="font-size:19px !important;"> {{ .Params.description }} </p>
-      <h4 style="text-align: center;">{{ .Params.subdescription }} </h4>
-	  </header>
-
-    
-	  	
-      {{ $pages := .Paginator.Pages }}
-      {{ $len := (len $pages) }}
-      <div class="row no-collapse 50% uniform">
-          {{ range .Pages.ByDate }}
-            <div class="col-4 col-12-mobilep">
-              <div class="video-item-interview">
-                <span class="image fit">
-                  <a href="{{ .Permalink }}">
-                    <img src="{{ index .Params.images 0 | absURL }}"></img>
-                  </a/>
-
-                </span>
-              
-                <div class="video-caption">
-                  <a style="text-align: center; justify-content: center !important;" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-                    <p style="font-style: italic;" class="subtitle-video">{{ with .Params.subtitle }} {{ .  }}  {{ end }}</p>
-                    {{ with .Params.passage }} | {{ . | markdownify }} | {{ end }}
-                  
-                </div>
-              </div>
-            </div>
-           {{ end }}
-      </div>
-      <p>{{ .Content }}</p>
-    </div>
-
-    
-    <hr />
-
-		
-	</section>
+<main id="main" class="site-editorial editorial-interviews">
+  <header class="ed-heading"><p class="ed-eyebrow">CONVERSACIONES QUE NOS INSPIRAN</p><h1>Otras miradas.<br> Nuevas preguntas.</h1><p class="ed-lead">Voces del mundo educativo para reflexionar sobre la infancia, el juego y el aprendizaje en la naturaleza.</p></header>
+  {{ $featured := .GetPage "mathias-knust" }}
+  {{ with $featured }}
+  <section class="interview-featured" aria-label="Entrevista destacada">
+    <a class="featured-image" href="{{ .RelPermalink }}#entrevista-video" aria-label="Ver entrevista a {{ .Title }}">{{ with .Params.images }}<img src="{{ index . 0 | relURL }}" alt="{{ $featured.Title }}" decoding="async" width="800" height="450">{{ end }}<span class="ed-play" aria-hidden="true">▶</span></a>
+    <div class="featured-copy"><p class="ed-eyebrow">EDUCACIÓN Y COLABORACIÓN</p><h2>Aprender en la naturaleza, resolver en comunidad.</h2><p class="featured-name">{{ .Title }}</p><p>Una conversación sobre educación al aire libre y resolución colaborativa de problemas.</p><a class="ed-button" href="{{ .RelPermalink }}#entrevista-video">Ver entrevista <span aria-hidden="true">↗</span></a></div>
+  </section>
+  {{ end }}
+  <section aria-labelledby="interview-library"><div class="ed-section-heading"><h2 id="interview-library">Más conversaciones</h2><p>Experiencias y perspectivas para seguir aprendiendo.</p></div><div class="ed-grid interview-grid">{{ range .Pages.ByDate }}{{ if or (not $featured) (ne .RelPermalink $featured.RelPermalink) }}{{ partial "editorial-interview-card" . }}{{ end }}{{ end }}</div></section>
+  <details class="editorial-credits"><summary>Créditos y agradecimientos</summary><div class="ed-prose">{{ .Content }}</div></details>
+  <aside class="ed-invitation"><div><p class="ed-eyebrow">SIGAMOS CONVERSANDO</p><h2>Las ideas crecen cuando las compartimos.</h2></div><a class="ed-button" href="{{ "/contact/" | relURL }}">Escríbenos ↗</a></aside>
+</main>
 {{ end }}
-
-

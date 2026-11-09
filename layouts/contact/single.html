@@ -1,17 +1,1 @@
-{{ define "main" }}
-
-			{{ "<!-- Main -->" | safeHTML }}
-				<section id="main" class="container">
-					<header>
-						<h2>{{ if .Draft }}DRAFT: {{end}}{{ .Params.title }}</h2>
-						{{ with .Params.subtitle }}<p>{{ . }}</p>{{ end }}
-					</header>
-					<div class="box">
-						
-						{{ .Content }}
-						<hr />
-					
-						
-					</div>
-				</section>
-{{ end }}
+{{ define "main" }}{{ partial "editorial-contact" . }}{{ end }}

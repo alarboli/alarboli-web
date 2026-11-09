@@ -1,53 +1,7 @@
 {{ define "main" }}
-	{{ "<!-- Main -->" | safeHTML }}
-	<section id="main" class="container">
-	 <!--
-      <div class="row no-collapse 50% uniform">
-        <div class="col-12 col-12-mobilep">
-          <span class="image fit">
-            <a href="{{ .Permalink }}">
-              <img src="{{ index .Params.images 1 | absURL }}"></img>
-            </a/>
-          </span>
-          {{ .Content }}
-        </div>
-
-     -->  
-      
-        <div class="row no-collapse 50% uniform">
-          
-          <div class="col-12 col-12-mobilep">
-            <div>
-              <h3 style="font-weight: 600;" href="{{ .Permalink }}">{{ .Title | markdownify }}</h2>
-              <img class="image fit-single" src="{{ index .Params.images 1 | absURL }}" />
-              <p> {{ .Content | safeHTML }}</p>
-                
-              
-            </div>
-            <!--
-              <div class="image fit">
-              <span class="">
-                <a href="{{ .Permalink }}">
-                  
-                </a/>
-
-              </span>
-              
-              
-            </div>
-            
-            -->
-            
-          </div>
-          
-        
-    </div>
-              
-    </div>
-    <hr />
-      
-		
-	</section>
+<main id="main" class="site-editorial editorial-person">
+  <nav class="ed-breadcrumb" aria-label="Ruta de navegación"><a href="{{ "/equipo/" | relURL }}">Equipo</a><span aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span></nav>
+  <div class="person-layout"><aside class="person-photo">{{ with .Params.images }}{{ $image := index . 0 }}{{ if gt (len .) 1 }}{{ $image = index . 1 }}{{ end }}<img src="{{ $image | relURL }}" alt="{{ $.Title }}" decoding="async">{{ end }}</aside><article><header class="ed-heading"><p class="ed-eyebrow">{{ .Params.rol }}</p><h1>{{ .Title }}</h1></header><div class="ed-prose">{{ .Content }}</div></article></div>
+  <a class="ed-text-link ed-return" href="{{ "/equipo/" | relURL }}">← Conoce al equipo completo</a>
+</main>
 {{ end }}
-
-

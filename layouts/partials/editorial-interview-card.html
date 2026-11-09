@@ -1,0 +1,4 @@
+<article class="ed-card interview-card">
+  <a class="ed-card-image" href="{{ .RelPermalink }}#entrevista-video" aria-label="Ver entrevista a {{ .Title }}">{{ with .Params.images }}<img src="{{ index . 0 | relURL }}" alt="{{ $.Title }}" loading="lazy" decoding="async" width="800" height="450">{{ end }}<span class="ed-play" aria-hidden="true">▶</span></a>
+  <div class="ed-card-body"><p class="ed-eyebrow">CONVERSACIONES ALARBOLÍ</p><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>{{ with .Params.subtitle }}<p>{{ . }}</p>{{ end }}<a class="ed-text-link" href="{{ .RelPermalink }}#entrevista-video">Ver entrevista <span aria-hidden="true">↗</span><span class="ed-sr-only"> a {{ .Title }}</span></a></div>
+</article>

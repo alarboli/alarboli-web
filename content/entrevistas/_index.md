@@ -1,5 +1,14 @@
 ---
 title: "ENTREVISTAS"
+aliases:
+  - "/entrevistas/page/2/"
+  - "/entrevistas/page/3/"
+  - "/entrevistas/page/4/"
+  - "/entrevistas/page/5/"
+  - "/entrevistas/page/6/"
+  - "/entrevistas/page/7/"
+  - "/entrevistas/page/8/"
+  - "/entrevistas/page/9/"
 description: "ALARBOLÍ"
 subdescription: "En esta sección podrás encontrar entrevistas de diferentes profesionales del ámbito educativo."
 
@@ -28,4 +37,4 @@ Agradecemos a cada profesional entrevistado por la disposición y colaboración 
 
 > **"El viaje de ida, la vida como un continuo crecimiento. La sencillez nos mantiene despiertos y revela como una luz la historia de la que venimos y somos parte. Para ir es un juego también... tal vez porque esta emoción al deslumbrarse por lo pequeño y los detalles, muestra a lo lúdico como una sabiduría...."**
 
-<p style="float:right;">Camilo Eque</p>  
+<p style="float:right;">Camilo Eque</p>

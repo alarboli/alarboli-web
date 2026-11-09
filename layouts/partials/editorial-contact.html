@@ -1,0 +1,32 @@
+<main id="main" class="site-editorial editorial-contact">
+  <div class="contact-layout">
+    <section class="contact-intro" aria-labelledby="contact-title">
+      <p class="ed-eyebrow">SIGAMOS CONECTANDO</p>
+      <h1 id="contact-title">Las buenas ideas también crecen en comunidad.</h1>
+      <p class="ed-lead">¿Quieres compartir una experiencia, conversar sobre educación en la naturaleza o proponer una colaboración?</p>
+      <p>Nos encantará leerte.</p>
+      <dl class="contact-details">
+        <div><dt>ESCRÍBENOS</dt><dd><a href="mailto:{{ .Site.Params.Contact.mail }}">{{ .Site.Params.Contact.mail }}</a></dd></div>
+        <div><dt>NOS ENCUENTRAS EN</dt><dd>Valdivia, Región de los Ríos · Chile</dd></div>
+      </dl>
+      <a class="ed-text-link" href="https://www.instagram.com/alarbolilosrios/" target="_blank" rel="noopener noreferrer">Nuestro día a día en Instagram <span aria-hidden="true">↗</span></a>
+    </section>
+    <section class="contact-form-panel" aria-labelledby="contact-form-title">
+      <h2 id="contact-form-title">Conversemos</h2><p>Cuéntanos en qué estás pensando.</p>
+      <form name="contact" method="POST" action="https://formsubmit.co/{{ .Site.Params.Contact.mail }}">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde ALARBOLÍ">
+        <input type="hidden" name="_next" value="{{ .Site.Params.Contact.confirm_page | absURL }}">
+        <div hidden><input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true"></div>
+        <label for="contact-name">Tu nombre <span>(obligatorio)</span></label>
+        <input id="contact-name" type="text" name="name" placeholder="¿Cómo te llamas?" autocomplete="name" maxlength="150" required>
+        <label for="contact-email">Correo electrónico <span>(obligatorio)</span></label>
+        <input id="contact-email" type="email" name="email" placeholder="nombre@ejemplo.cl" autocomplete="email" maxlength="254" required>
+        <label for="contact-message">Tu mensaje <span>(obligatorio)</span></label>
+        <textarea id="contact-message" name="message" placeholder="Me gustaría conversar sobre…" rows="6" maxlength="10000" required></textarea>
+        <p class="contact-form-note" id="contact-send-note">El envío se procesa a través de FormSubmit. Es posible que debas completar una verificación antispam.</p>
+        <button type="submit" class="ed-button" aria-describedby="contact-send-note">Enviar mensaje <span aria-hidden="true">↗</span></button>
+      </form>
+    </section>
+  </div>
+  <aside class="contact-landscape"><img src="{{ "/img/principal.JPG" | relURL }}" alt="Bosque de Valdivia" loading="lazy" decoding="async"><p>Un espacio para encontrarnos,<br>aprender y cuidar nuestro entorno.</p></aside>
+</main>

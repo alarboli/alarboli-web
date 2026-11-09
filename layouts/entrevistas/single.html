@@ -1,14 +1,12 @@
 {{ define "main" }}
-			{{ "<!-- Main -->" | safeHTML }}
-            <section id="main" class="container-bigger">
-                <header>
-                    <h2>{{ .Params.title }}</h2>
-                    {{ with .Params.passage }}<p>{{ . }}</p>{{ end }}
-                </header> 
-                <div class="box">
-                    <p class="content-interview">{{ .Content }}</p> 
-                </div>
-            </section>
+<main id="main" class="site-editorial editorial-interview-detail">
+  <nav class="ed-breadcrumb" aria-label="Ruta de navegación"><a href="{{ "/entrevistas/" | relURL }}">Entrevistas</a><span aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span></nav>
+  <header class="ed-heading"><p class="ed-eyebrow">CONVERSACIONES ALARBOLÍ</p><h1>{{ .Title }}</h1>{{ with .Params.subtitle }}<p class="ed-lead">{{ . }}</p>{{ end }}</header>
+  {{ $body := .Content }}
+  {{ $videos := findRE `(?s)<div[^>]*>\s*<iframe[^>]*>.*?</iframe>\s*</div>` $body }}
+  {{ if $videos }}{{ $embed := index $videos 0 }}<section id="entrevista-video" class="interview-video" aria-label="Video de la entrevista">{{ $embed | safeHTML }}</section>{{ $body = replace $body $embed "" }}{{ end }}
+  <article class="ed-prose interview-biography">{{ $body | safeHTML }}</article>
+  <section class="related-interviews" aria-labelledby="related-title"><div class="ed-section-heading"><h2 id="related-title">Sigue la conversación</h2></div><div class="ed-grid">{{ range first 3 (where .CurrentSection.Pages.ByDate "RelPermalink" "ne" .RelPermalink) }}{{ partial "editorial-interview-card" . }}{{ end }}</div></section>
+  <a class="ed-text-link ed-return" href="{{ "/entrevistas/" | relURL }}">← Todas las entrevistas</a>
+</main>
 {{ end }}
-       
-                

@@ -1,18 +1,7 @@
 {{ define "main" }}
-
-			{{ "<!-- Main -->" | safeHTML }}
-				<section id="main" class="container">
-					<header> 
-						<h2>{{ .Params.title }}</h2>
-						{{ with .Params.subtitle }}<p style="display:flex !important; justify-content:center !important;">{{ . }}</p>{{ end }}
-					</header>
-					<div class="box-mision">
-						{{ with .Params.images }}
-							<span class="image featured"><img src="{{ index . 0 | absURL }}" alt=""></span>
-						{{ end }}
-						<p>{{ .Content }}</p>
-						
-						
-					</div>
-				</section>
+<main id="main" class="site-editorial editorial-mission">
+  <div class="mission-hero"><header class="ed-heading"><p class="ed-eyebrow">SOBRE ALARBOLÍ</p><h1>Una infancia conectada con la naturaleza.</h1><p class="ed-lead">{{ .Params.subtitle }}</p></header><img src="{{ "/img/principal.JPG" | relURL }}" alt="Entorno natural del proyecto ALARBOLÍ" decoding="async"></div>
+  <div class="mission-blocks">{{ range $index, $block := after 1 (split .RawContent "## ") }}{{ $lines := split $block "\n" }}<section class="mission-block"><p class="ed-eyebrow">{{ printf "%02d" (add $index 1) }} / NUESTRO PROPÓSITO</p><h2>{{ trim (index $lines 0) "\r " }}</h2><div class="ed-prose">{{ delimit (after 1 $lines) "\n" | markdownify }}</div></section>{{ end }}</div>
+  <aside class="ed-invitation"><div><p class="ed-eyebrow">DEL PROPÓSITO A LA EXPERIENCIA</p><h2>Conoce cómo lo llevamos a la práctica.</h2></div><a class="ed-button" href="{{ "/proyectos/" | relURL }}">Explorar proyectos ↗</a></aside>
+</main>
 {{ end }}
