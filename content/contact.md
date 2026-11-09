@@ -6,10 +6,7 @@ images: ["img/banner_inicio.jpeg"]
 tags: ""
 draft: false
 
-cascade: 
-    type: "contact"
-    _target: 
-        path: "/contact.md"
+type: "contact"
 
 ---
 
