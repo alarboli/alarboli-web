@@ -1,5 +1,7 @@
 ---
 title: "Los árboles en mi infancia"
+type: "sesiones"
+editorial_summary: "Juego, exploración e indagación en la naturaleza con niñas y niños de 3 a 6 años, en Parque Urbano El Bosque de Valdivia."
 date: 2021-08-04T17:05:39-04:00
 description: ""
 image: "/img/sesion1/2.jpg"

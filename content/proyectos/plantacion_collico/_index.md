@@ -1,9 +1,31 @@
 --- 
 title: "Plantación familiar colaborativa de árboles para nuestro Hogar"
+type: "proyectos_n"
+editorial_summary: "Familias y comunidad de Collico se reúnen para explorar su entorno, plantar árboles y cuidar el lugar que habitan."
 date: 2022-08-04T17:05:39-04:00
 description: ""
 image: "/img/proyectos/plantacion_collico/5.jpg"
-images: ["/img/proyectos/plantacion_collico/1.jpg","/img/proyectos/plantacion_collico/2.jpg","/img/proyectos/plantacion_collico/3.jpg","/img/proyectos/plantacion_collico/4.jpg","/img/proyectos/plantacion_collico/5.jpg","/img/proyectos/plantacion_collico/6.jpg","/img/proyectos/plantacion_collico/7.jpg","/img/proyectos/plantacion_collico/8.jpg","/img/proyectos/plantacion_collico/9.jpg","/img/proyectos/plantacion_collico/10.jpg","/img/proyectos/plantacion_collico/11.jpg","/img/proyectos/plantacion_collico/12.jpg","/img/proyectos/plantacion_collico/13.jpg","/img/proyectos/plantacion_collico/14.jpg","/img/proyectos/plantacion_collico/15.jpg","/img/proyectos/plantacion_collico/16.jpg","/img/proyectos/plantacion_collico/17.jpg","/img/proyectos/plantacion_collico/18.jpg","/img/proyectos/plantacion_collico/19.png","/img/proyectos/plantacion_collico/20.png"]
+images:
+  - "/img/proyectos/plantacion_collico/1.jpg"
+  - "/img/proyectos/plantacion_collico/2.jpg"
+  - "/img/proyectos/plantacion_collico/3.jpg"
+  - "/img/proyectos/plantacion_collico/4.jpg"
+  - "/img/proyectos/plantacion_collico/5.jpg"
+  - "/img/proyectos/plantacion_collico/6.jpg"
+  - "/img/proyectos/plantacion_collico/7.jpg"
+  - "/img/proyectos/plantacion_collico/8.jpg"
+  - "/img/proyectos/plantacion_collico/9.jpg"
+  - "/img/proyectos/plantacion_collico/10.jpg"
+  - "/img/proyectos/plantacion_collico/11.jpg"
+  - "/img/proyectos/plantacion_collico/13.jpg"
+  - "/img/proyectos/plantacion_collico/14.jpg"
+  - "/img/proyectos/plantacion_collico/15.jpg"
+  - "/img/proyectos/plantacion_collico/16.jpg"
+  - "/img/proyectos/plantacion_collico/17.jpg"
+  - "/img/proyectos/plantacion_collico/18.jpg"
+  - "/img/proyectos/plantacion_collico/19.jpg"
+  - "/img/proyectos/plantacion_collico/19.png"
+  - "/img/proyectos/plantacion_collico/20.png"
 ---
 
 
@@ -19,7 +41,7 @@ Plantación colaborativa familiar; el objetivo de esta actividad fue incrementar
 
 <div style="margin-top:3em"></div>
 <div style="display:flex; justify-content-center; align-items:center;">
-    {{< gallery-slider dir="img/proyectos/plantacion_collico" auto-slide="2500"  width="680px" height="420px" arrow-left="fa-angle-left" arrow-right="fa-angle-right">}}
+    {{< editorial-gallery >}}
 
 </div>
 

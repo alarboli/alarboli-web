@@ -1,6 +1,7 @@
 --- 
 title: "PROYECTOS"
 description: "ALARBOLÍ"
+type: "proyectos"
 
 cascade:
 - type: "sesion_inside"

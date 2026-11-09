@@ -1,48 +1,26 @@
 {{ define "main" }}
-	{{ "<!-- Main -->" | safeHTML }}
-	<section id="main" class="container-bigger">
-	  <header>
-	    <h2>{{ .Params.title }}</h2>
-		  <p>{{ .Params.description }}</p>
-	  </header>
-
-  	  {{ $pages := .Paginator.Pages }}
-      {{ $len := (len $pages) }}
-      
-      <div class="row no-collapse 50% uniform">
-            {{ range .Pages.ByDate }}
-            <div class="col-4 col-12-mobilep">
-              <div class="image-item-bigger">
-                <span class="">
-                  <a href="{{ .Permalink }}">
-                    <img src="{{ .Params.image | absURL }}"></img>
-                  </a/>
-
-                </span>
-
-              
-                
-              </div>
-              <div class="video-caption-bigger  ">
-                <a  href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-                  <p>{{ .Summary | plainify | safeHTML | truncate 100 }}</p>
-                  {{ if .Truncated }}
-                    <a class="see-more-btn" href="{{ .Permalink }}" >
-                        <button class="button small alt">Leer más <i class="fas fa-angle-double-right"></i></button>
-                    </a>
-                  {{ end }} {{/* if */}}
-                  {{ with .Params.subtitle }} | {{ . | markdownify }} | {{ end }}
-                  {{ with .Params.passage }} | {{ . | markdownify }} | {{ end }}
-                
-              </div>
-            </div>
-           
-            {{ end }}          
+<main id="main" class="projects-editorial project-index">
+  <header class="project-heading">
+    <p class="project-eyebrow">ALARBOLÍ · EXPERIENCIAS EN LA NATURALEZA</p>
+    <h1>Proyectos que nos conectan</h1>
+    <p class="project-lead">Infancia, educación y comunidad. Conoce las experiencias que hemos compartido al aire libre en la Región de los Ríos.</p>
+  </header>
+  <div class="project-grid">
+    {{ range .Pages.ByDate }}
+    <article class="project-card">
+      <a class="project-card-image" href="{{ .RelPermalink }}" aria-label="Ver proyecto: {{ .Title }}"><img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy" decoding="async" width="800" height="600"></a>
+      <div class="project-card-body">
+        <p class="project-eyebrow">VALDIVIA · {{ .Params.editorial_year | default (.Date.Format "2006") }}</p>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p>{{ .Params.editorial_summary | default (.Summary | plainify | truncate 170) }}</p>
+        <a class="project-text-link" href="{{ .RelPermalink }}">Ver proyecto <span aria-hidden="true">↗</span><span class="project-sr-only">: {{ .Title }}</span></a>
       </div>
-    
-    <hr />
-    {{ template "_internal/pagination.html" . }}
-      
-		
-	</section>
+    </article>
+    {{ end }}
+  </div>
+  <aside class="project-invitation">
+    <div><p class="project-eyebrow">SIGAMOS CONECTANDO</p><h2>La naturaleza también es un lugar de encuentro.</h2></div>
+    <a class="project-button" href="{{ "/contact/" | relURL }}">Conversemos <span aria-hidden="true">↗</span></a>
+  </aside>
+</main>
 {{ end }}

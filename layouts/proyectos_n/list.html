@@ -1,18 +1,7 @@
 {{ define "main" }}
-	{{ "<!-- Main -->" | safeHTML }}
-	<section id="main" class="container-bigger">
-	  <header>
-      <h2 style="margin-bottom: 1em !important;">{{ .Title  }}</h2>
-    </header>
-  
-    {{ $pages := .Paginator.Pages }}
-      {{ $len := (len $pages) }}
-      <p class="sesion-text">{{ .Content }}</p>
-	  
-     
-      
-		
-	</section>
+<main id="main" class="projects-editorial project-detail">
+  {{ partial "project-heading" . }}
+  <article class="project-prose">{{ .Content }}</article>
+  <a class="project-text-link project-return" href="{{ "/proyectos/" | relURL }}">← Todos los proyectos</a>
+</main>
 {{ end }}
-
-

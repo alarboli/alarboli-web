@@ -1,42 +1,23 @@
 {{ define "main" }}
-	{{ "<!-- Main -->" | safeHTML }}
-	<section id="main" class="container">
-	  <header>
-      <a class="back-sesion" href='{{ "/proyectos/sesiones/" | relURL }}'>← Volver a sesiones</a>
-	    <h2>{{ .Title | title }}</h2>
-		  
-	  </header>
-
-    
-      <p> {{ .Content }} </p>
-      {{ $pages := .Paginator.Pages }}
-      {{ $len := (len $pages) }}
-	  {{ template "partials/pagination.html" . }}
-      <div class="row no-collapse 50% uniform">
-		{{ range (.Paginate ( first 11 .Pages.ByWeight.Reverse )).Pages }}
-            <div class="col-10 col-12-mobilep">
-              <div class="video-item-sesion">
-                <span class="image fit">
-                    <img src="{{ index .Params.images 0 | absURL }}"></img>
-                  
-
-                </span>
-              
-                <div class="video-caption">
-                    <p style="color: black; text-align: center;" class=""> {{ .Summary | plainify | safeHTML | truncate 300 }}</p>
-                    
-                </div>
-              </div>
-            </div>
-           {{ end }}
-      </div>
-              
-    </div>
-    <hr />
-    
-      
-		
-	</section>
+<main id="main" class="projects-editorial project-detail">
+  {{ partial "project-heading" . }}
+  {{ with .Content }}<div class="project-prose">{{ . }}</div>{{ end }}
+  <p class="project-gallery-hint">Selecciona una fotografía para verla completa y recorrer la galería.</p>
+  <div class="project-gallery session-gallery">
+    {{ range .Pages.ByWeight }}{{ $photo := . }}{{ with .Params.images }}
+    <figure class="project-photo">
+      <a href="{{ index . 0 | relURL }}" data-gallery-item data-caption="{{ $photo.Content | plainify }}" aria-label="Ampliar {{ $photo.Title }}">
+        <img src="{{ index . 0 | relURL }}" alt="{{ $photo.Content | plainify | default $photo.Title }}" loading="lazy" decoding="async"><span class="project-photo-expand" aria-hidden="true">↗</span>
+      </a>
+      {{ with $photo.Content }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+    {{ end }}{{ end }}
+  </div>
+  <nav class="project-session-nav" aria-label="Navegación de sesiones">
+    {{ $sessions := .Parent.Pages.ByDate }}{{ $current := .RelPermalink }}
+    {{ range $i, $session := $sessions }}{{ if and (eq $session.RelPermalink $current) (gt $i 0) }}{{ with index $sessions (sub $i 1) }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ end }}{{ end }}{{ end }}
+    <a href="{{ "/proyectos/sesiones/" | relURL }}">Todas las sesiones</a>
+    {{ range $i, $session := $sessions }}{{ if and (eq $session.RelPermalink $current) (lt $i (sub (len $sessions) 1)) }}{{ with index $sessions (add $i 1) }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}{{ end }}{{ end }}
+  </nav>
+</main>
 {{ end }}
-
-

@@ -1,0 +1,10 @@
+<nav class="project-breadcrumb" aria-label="Ruta de navegación">
+  <a href="{{ "/proyectos/" | relURL }}">Proyectos</a>
+  {{ with .Parent }}{{ if ne .RelPermalink ("/proyectos/" | relURL) }}<span aria-hidden="true">/</span><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ end }}
+  <span aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span>
+</nav>
+<header class="project-heading project-heading-detail">
+  <p class="project-eyebrow">ALARBOLÍ · DOCUMENTACIÓN Y EXPERIENCIAS</p>
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.editorial_summary }}<p class="project-lead">{{ . }}</p>{{ end }}
+</header>

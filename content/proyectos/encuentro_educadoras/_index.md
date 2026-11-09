@@ -1,5 +1,8 @@
 --- 
 title: "Encuentro de Educación al aire libre en la Primera Infancia"
+type: "proyectos_n"
+editorial_year: "2021"
+editorial_summary: "Un encuentro para compartir experiencias, reflexionar sobre la práctica pedagógica y fortalecer la educación al aire libre."
 date: 2022-06-04T17:05:39-04:00
 description: ""
 image: "/img/proyectos/encuentro_educadoras/1.jpg"
@@ -23,7 +26,7 @@ El encuentro entre educadoras/es fue gratificante y se espera a futuro seguir tr
 
 <div style="margin-top:3em"></div>
 <div style="display:flex; justify-content-center; align-items:center;">
-    {{< gallery-slider dir="/img/proyectos/encuentro_educadoras" auto-slide="2500"  width="680px" height="400px" arrow-left="fa-angle-left" arrow-right="fa-angle-right">}}
+    {{< editorial-gallery >}}
 
 </div>
 

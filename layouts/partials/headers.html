@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+{{ with .Site.Params.languageCode }}<html lang="{{ . }}">{{ end }}
+	<head>
+		<title>{{ if .Title }}{{ .Title }} | {{ end }} {{ .Site.Params.title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		{{ with .Site.Params.subtitle }}<meta name="description" content="{{ . }}">{{ end }}
+		{{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}
+		<meta name="keywords" content="
+			{{- if .IsHome -}}
+				{{- if .Site.Params.keywords -}}
+			{{- range $i, $e := .Site.Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end -}}
+					{{ end -}}
+			{{ end -}}
+			{{ if .IsPage }}
+				{{- if .Params.tags -}}
+			{{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+				{{- end -}}
+			{{ end -}}" />
+		{{- with .OutputFormats.Get "rss" -}}
+		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+		{{- end -}}
+		{{ hugo.Generator }}
+		{{- with .Site.Params.Favicon.sml}}<link rel="shortcut icon" href="{{ . }}" sizes="16x16"/>{{ end -}}
+		{{- with .Site.Params.Favicon.med}}<link rel="shortcut icon" href="{{ . }}" sizes="32x32"/>{{ end -}}
+		{{- with .Site.Params.Favicon.lge}}<link rel="shortcut icon" href="{{ . }}" sizes="96x96"/>{{ end -}}
+		{{ template "_internal/opengraph.html" . }}
+		{{ template "_internal/twitter_cards.html" . }}
+		<link rel="stylesheet" href="{{ "fontawesome/css/all.min.css" | absURL }}" />
+		{{- $css := .Site.Data.libs.css -}}
+		{{- $ieStyles := resources.Get "scss/ie8.scss" | toCSS | minify -}}
+		{{- $ieJs := resources.Get "js/ie/html5shiv.js" | minify -}}
+		{{ $style := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS | minify | fingerprint }}
+		<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="screen" crossorigin="anonymous" />
+		{{- range .Site.Params.customCSS -}}
+		<link rel="stylesheet" href="{{ . | absURL }}">
+		{{- end -}}
+		{{ if eq .Section "proyectos" }}
+		{{ $editorialCSS := resources.Get "css/projects-editorial.css" | minify | fingerprint }}
+		<link rel="stylesheet" href="{{ $editorialCSS.RelPermalink }}" integrity="{{ $editorialCSS.Data.Integrity }}">
+		{{ $editorialJS := resources.Get "js/projects-editorial.js" | minify | fingerprint }}
+		<script defer src="{{ $editorialJS.RelPermalink }}" integrity="{{ $editorialJS.Data.Integrity }}"></script>
+		{{ end }}
+	</head>
