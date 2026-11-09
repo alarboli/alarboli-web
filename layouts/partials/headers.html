@@ -41,7 +41,7 @@
 		{{ $editorialJS := resources.Get "js/projects-editorial.js" | minify | fingerprint }}
 		<script defer src="{{ $editorialJS.RelPermalink }}" integrity="{{ $editorialJS.Data.Integrity }}"></script>
 		{{ end }}
-		{{ if or (in (slice "contact" "contact_thanks" "entrevistas" "equipo" "vision") .Type) (in (slice "contact" "entrevistas" "equipo") .Section) }}
+		{{ if or (in (slice "contact" "contact_thanks" "entrevistas" "vision") .Type) (in (slice "contact" "entrevistas") .Section) }}
 		{{ $sectionCSS := resources.Get "css/sections-editorial.css" | minify | fingerprint }}
 		<link rel="stylesheet" href="{{ $sectionCSS.RelPermalink }}" integrity="{{ $sectionCSS.Data.Integrity }}">
 		{{ end }}

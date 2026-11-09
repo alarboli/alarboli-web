@@ -4,18 +4,13 @@
 @import 'libs/vendor';
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
-@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap');
-/* 	import additional Fonts from fonts.google.com
-	use Format e.g. "Playfair+Display:400,700" 		*/
-{{ range .Site.Params.Style.googleFonts }}
-@import url("https://fonts.googleapis.com/css?family={{ . }}");
-{{ end }}
+
+// Two text families across the site. Icon fonts retain their own declarations.
+:root {
+  --font-body: 'Montserrat', Arial, sans-serif;
+  --font-display: Georgia, 'Times New Roman', serif;
+}
 
 
 // Breakpoints.
@@ -142,7 +137,7 @@
 
 	body, input, select, textarea {
 		color: #575757;
-		font-family: 'Montserrat', sans-serif;
+		font-family: var(--font-body);
 		font-weight: 500;
 		line-height: 1.65em;
 		letter-spacing: -0.015em;
@@ -171,8 +166,7 @@
 
 	p {
 		margin: _size(element-margin) 0 _size(element-margin) 0;
-		font-family: 'Montserrat', sans-serif;
-		//font-family:'Inter', sans-serif;
+		font-family: var(--font-body);
 		text-align: justify;
   		text-justify: inter-word;
 		font-size:17px;
@@ -196,12 +190,14 @@
 	}
 
 	h1 {
+  font-family: var(--font-display);
   font-size: 2.75em;
   line-height: 1.5em;
   letter-spacing: -0.035em;
 	}
 
 	h2 {
+		font-family: var(--font-display);
 		font-size: 1.7em;
 		line-height: 1.5em;
 		letter-spacing: -0.035em;
@@ -272,7 +268,7 @@
 		background: _palette(border-bg);
 		border-radius: _size(border-radius);
 		border: solid 1px _palette(border);
-		font-family: 'Montserrat', sans-serif;
+		font-family: var(--font-body);
 		font-size: 0.9em;
 		line-height: 1.75em;
 		margin: 0 0 _size(element-margin) 0;
@@ -284,7 +280,7 @@
 		background: _palette(border-bg);
 		border-radius: _size(border-radius);
 		border: solid 1px _palette(border);
-		font-family: 'Montserrat', sans-serif;
+		font-family: var(--font-body);
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
@@ -1303,7 +1299,7 @@
 	table {
 		margin: 0 0 _size(element-margin) 0;
 		width: 100%;
-		font-family: 'Montserrat', sans-serif;
+		font-family: var(--font-body);
 		font-weight: 500;
 
 
@@ -1533,8 +1529,7 @@
 		}
 
 		nav {
-			//font-family: 'Open Sans', sans-serif !important;
-			font-family: 'Nunito Sans', sans-serif;
+			font-family: var(--font-body);
 			height: inherit;
 			line-height: inherit;
 			position: absolute;
@@ -1574,7 +1569,7 @@
 						color: _palette(header, fg-bold);
 						//text-transform: uppercase;
 						font-weight: bold;
-						font-family: 21px;
+						font-family: inherit;
 						display: inline-block;
 						text-decoration: none;
 						border: 0;
@@ -1779,10 +1774,7 @@
 
 		h2 {
 			//font-size: 4.5em !important;
-			//font-family: 'Catamaran', sans-serif;
-			//font-family: 'Montserrat', sans-serif;
-			font-family: 'Merriweather', serif;
-			//font-family: 'Roboto Slab', serif;
+			font-family: var(--font-display);
 			font-weight: 700;
 			line-height: 1em;
 			margin: 0 0 0.5em 0;
@@ -3236,8 +3228,18 @@
 	cursor: pointer;
 }
 
+// Keep the shared text family readable without overlapping the logo on tablets.
+@media (min-width: 841px) and (max-width: 1200px) {
+  #header .img-logo { width: 200px; height: auto; margin: 18px 0 0 18px; }
+  #header nav { left: 235px; right: 1em; }
+  #header nav > ul { display: flex; align-items: center; justify-content: flex-end; height: 100%; padding-left: 0; gap: 4px; }
+  #header nav > ul > li { padding-left: 0; flex-shrink: 0; }
+  #header nav > ul > li > a { margin-top: 0; padding: 0 .65em; font-size: 14px; white-space: nowrap; }
+  #header nav > ul > li > a:not(.button) { font-weight: 600; }
+}
+
 .marker::before {
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--font-body);
 	font-weight: 900;
 	content: "\f51d";
 	text-align: center; ;
@@ -3271,8 +3273,7 @@
 	text-decoration: none !important;
 	position:relative;
 	color: white; 
-	//font-family: 'Vollkorn SC', serif;
-	font-family: 'Inter', sans-serif;
+	font-family: var(--font-body);
 	font-weight: 700;
 	padding-left: 65px;
 	text-transform: uppercase;
@@ -3327,8 +3328,7 @@
 	text-decoration: none !important;
 	position:relative;
 	color: white; 
-	font-family: 'Nunito Sans', sans-serif;
-	//font-family: 'Vollkorn SC', serif;
+	font-family: var(--font-body);
 	font-weight: 700;
 	padding-left: 10px;
 	font-size: 19px;
