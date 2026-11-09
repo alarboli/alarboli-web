@@ -1,0 +1,4 @@
+<article class="project-card news-card">
+  <a class="project-card-image" href="{{ .RelPermalink }}" aria-label="Leer noticia: {{ .Title }}">{{ $page := . }}{{ with .Params.images }}<img src="{{ index . 0 | relURL }}" alt="{{ $page.Title }}" loading="lazy" decoding="async" width="800" height="600">{{ end }}</a>
+  <div class="project-card-body"><p class="project-eyebrow">{{ partial "news-date" . }}</p><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2><p>{{ .Params.editorial_summary | default (.Summary | plainify | truncate 170) }}</p><a class="project-text-link" href="{{ .RelPermalink }}">Leer noticia <span aria-hidden="true">↗</span><span class="project-sr-only">: {{ .Title }}</span></a></div>
+</article>

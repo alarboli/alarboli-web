@@ -1,0 +1,9 @@
+{{ $dir := trim (.Get "dir") "/" }}
+{{ $images := slice }}
+{{ range readDir (printf "static/%s" $dir) }}{{ if and (not .IsDir) (in (slice ".jpg" ".jpeg" ".png" ".webp" ".gif") (lower (path.Ext .Name))) }}{{ $images = $images | append (printf "/%s/%s" $dir .Name) }}{{ end }}{{ end }}
+<section id="galeria" class="project-gallery-section" aria-label="Fotografías de la noticia">
+  <h2>La experiencia, en imágenes</h2><p class="project-gallery-hint">Selecciona una fotografía para verla completa y recorrer la galería.</p>
+  <div class="project-gallery">{{ $title := .Page.Title }}{{ range $index, $image := $images }}
+    <figure class="project-photo"><a href="{{ $image | relURL }}" data-gallery-item data-caption="{{ $title }} · Fotografía {{ add $index 1 }}" aria-label="Ampliar fotografía {{ add $index 1 }}"><img src="{{ $image | relURL }}" alt="{{ $title }} — fotografía {{ add $index 1 }}" loading="lazy" decoding="async"><span class="project-photo-expand" aria-hidden="true">↗</span></a></figure>
+  {{ end }}</div>
+</section>

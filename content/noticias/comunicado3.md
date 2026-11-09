@@ -1,5 +1,6 @@
 ---
-title: "PLANTACIÓN DE ÁRBOL PRE-BÁSICA INSTITUTO SALESIANO DE VALDIVIA"
+title: "Plantación de árbol en la pre-básica del Instituto Salesiano de Valdivia"
+editorial_summary: "Niñas, niños, familias y educadoras comparten la plantación de un árbol nativo para fortalecer su vínculo con la naturaleza."
 date: 2022-06-03T18:51:25-04:00
 images: ["/img/noticias/Fotografías Plantación Instituto Salesiano Valdivia/1.jpg"]
 ---
@@ -15,7 +16,7 @@ Para llevar a cabo esta actividad ALARBOLÍ donó un árbol nativo a la comunida
 
 <div style="margin-top:3em"></div>
 <div style="display:flex; justify-content-center; align-items:center;">
-    {{< gallery-slider dir="/img/noticias/Fotografías Plantación Instituto Salesiano Valdivia" auto-slide="2500"  width="650px" height="380px" arrow-left="fa-angle-left" arrow-right="fa-angle-right">}}
+    {{< news-gallery dir="/img/noticias/Fotografías Plantación Instituto Salesiano Valdivia" >}}
 
 </div>
 

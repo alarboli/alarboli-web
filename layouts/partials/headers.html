@@ -35,7 +35,7 @@
 		{{- range .Site.Params.customCSS -}}
 		<link rel="stylesheet" href="{{ . | absURL }}">
 		{{- end -}}
-		{{ if eq .Section "proyectos" }}
+		{{ if in (slice "proyectos" "noticias") .Section }}
 		{{ $editorialCSS := resources.Get "css/projects-editorial.css" | minify | fingerprint }}
 		<link rel="stylesheet" href="{{ $editorialCSS.RelPermalink }}" integrity="{{ $editorialCSS.Data.Integrity }}">
 		{{ $editorialJS := resources.Get "js/projects-editorial.js" | minify | fingerprint }}
@@ -44,5 +44,9 @@
 		{{ if or (in (slice "contact" "contact_thanks" "entrevistas" "vision") .Type) (in (slice "contact" "entrevistas") .Section) }}
 		{{ $sectionCSS := resources.Get "css/sections-editorial.css" | minify | fingerprint }}
 		<link rel="stylesheet" href="{{ $sectionCSS.RelPermalink }}" integrity="{{ $sectionCSS.Data.Integrity }}">
+		{{ end }}
+		{{ if eq .Section "noticias" }}
+		{{ $newsCSS := resources.Get "css/news-editorial.css" | minify | fingerprint }}
+		<link rel="stylesheet" href="{{ $newsCSS.RelPermalink }}" integrity="{{ $newsCSS.Data.Integrity }}">
 		{{ end }}
 	</head>

@@ -1,5 +1,6 @@
 ---
-title: "ÁRBOLES NATIVOS PARA VILLA ALTOS DEL CALLE CALLE"
+title: "Árboles nativos para Villa Altos del Calle Calle"
+editorial_summary: "Familias, comunidad e instituciones se reúnen en Collico para plantar árboles nativos y cuidar juntos su entorno."
 date: 2022-08-10T18:51:20-04:00
 draft: false
 images: ["/img/noticias/plantacion-collico/3.jpg"]
@@ -18,4 +19,4 @@ Además de las numerosas familias del sector, estuvieron presentes Harold Leal T
 
 <div style="margin-top:3em"></div>
 
-{{< gallery-slider dir="/img/noticias/plantacion-collico" auto-slide="2500"  width="680px" height="390px" arrow-left="fa-angle-left" arrow-right="fa-angle-right">}}
+{{< news-gallery dir="/img/noticias/plantacion-collico" >}}

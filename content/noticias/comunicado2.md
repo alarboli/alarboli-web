@@ -1,5 +1,6 @@
 ---
-title: "ENCUENTRO DE EDUCACIÓN AL AIRE LIBRE EN LA PRIMERA INFANCIA"
+title: "Encuentro de educación al aire libre en la primera infancia"
+editorial_summary: "Una jornada de diálogo, colaboración y aprendizaje vivencial entre educadoras y educadores en Parque Urbano El Bosque."
 date: 2021-12-03T18:51:25-04:00
 draft: false
 main_image: ["/img/noticias/encuentro_educadoras/folleto.png"]
@@ -25,4 +26,4 @@ PALABRAS REFLEXIVAS DE LAS/ES EDUCADORAS/ES AL FINALIZAR EL ENCUENTRO:
 3 de diciembre 2021
 
 <div style="margin-top:3em"></div>
-{{< gallery-slider dir="/img/noticias/encuentro_educadoras" auto-slide="2500"  width="680px" height="400px" arrow-left="fa-angle-left" arrow-right="fa-angle-right">}}
+{{< news-gallery dir="/img/noticias/encuentro_educadoras" >}}

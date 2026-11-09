@@ -1,0 +1,2 @@
+{{ $months := slice "enero" "febrero" "marzo" "abril" "mayo" "junio" "julio" "agosto" "septiembre" "octubre" "noviembre" "diciembre" }}
+<time class="news-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Day }} de {{ index $months (sub (int .Date.Month) 1) }} de {{ .Date.Year }}</time>

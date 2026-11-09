@@ -1,0 +1,7 @@
+{{ define "main" }}
+<main id="main" class="projects-editorial news-editorial news-index">
+  <header class="project-heading"><p class="project-eyebrow">ALARBOLÍ · NOTICIAS</p><h1>Historias de nuestra comunidad</h1><p class="project-lead">Encuentros, experiencias y pequeños pasos para acercar la infancia a la naturaleza.</p></header>
+  <div class="project-grid">{{ range .Pages.ByDate.Reverse }}{{ partial "news-card" . }}{{ end }}</div>
+  <aside class="project-invitation"><div><p class="project-eyebrow">CONOCE NUESTRAS EXPERIENCIAS</p><h2>Del encuentro a la acción.</h2></div><a class="project-button" href="{{ "/proyectos/" | relURL }}">Explorar proyectos <span aria-hidden="true">↗</span></a></aside>
+</main>
+{{ end }}

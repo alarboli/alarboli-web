@@ -1,15 +1,10 @@
 {{ define "main" }}
-
-			{{ "<!-- Main -->" | safeHTML }}
-				<section id="main" class="container">
-					<header>
-						<h2 class="h2-news">{{ .Params.title }}</h2>
-						{{ with .Params.subtitle }}<p>{{ . }}</p>{{ end }}
-					</header>
-					<div class="box">
-						
-						{{ .Content }}
-						
-					</div>
-				</section>
+<main id="main" class="projects-editorial project-detail news-editorial news-article">
+  <nav class="project-breadcrumb" aria-label="Ruta de navegación"><a href="{{ "/noticias/" | relURL }}">Noticias</a><span aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span></nav>
+  <header class="project-heading project-heading-detail"><p class="project-eyebrow">ALARBOLÍ · NOTICIAS</p><h1>{{ .Title }}</h1><div class="news-article-date">{{ partial "news-date" . }}</div>{{ with .Params.editorial_summary }}<p class="project-lead">{{ . }}</p>{{ end }}</header>
+  {{ with .Params.images }}<figure class="news-hero"><img src="{{ index . 0 | relURL }}" alt="{{ $.Title }}" decoding="async"></figure>{{ end }}
+  <article class="project-prose">{{ .Content }}</article>
+  <section class="news-related" aria-labelledby="related-news-title"><div class="project-section-heading"><p class="project-eyebrow">SIGUE EXPLORANDO</p><h2 id="related-news-title">Más historias de ALARBOLÍ</h2></div><div class="project-grid">{{ range first 2 (where .CurrentSection.Pages.ByDate.Reverse "RelPermalink" "ne" .RelPermalink) }}{{ partial "news-card" . }}{{ end }}</div></section>
+  <nav class="news-article-actions" aria-label="Navegación de noticias"><a class="project-text-link" href="{{ "/noticias/" | relURL }}">← Todas las noticias</a><a class="project-text-link" href="{{ "/proyectos/" | relURL }}">Conoce los proyectos ↗</a></nav>
+</main>
 {{ end }}
