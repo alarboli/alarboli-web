@@ -52,6 +52,8 @@
   [[feature_images.tile]]
     image = "img/noticias/Fotografías Plantación Instituto Salesiano Valdivia/5.jpg"
     title = "Plantación de árbol Pre-básica Instituto Salesiano de Valdivia."
+    display_title = "Plantación de un árbol en la prebásica del Instituto Salesiano"
+    category = "Educación al aire libre"
     text = ""
     url = "/noticias/comunicado3"
     button_text="Ver más"
@@ -60,6 +62,7 @@
   [[feature_images.tile]]
     image = "img/noticias/plantacion-collico/3.jpg"
     title = "Plantación de árboles nativos en Villa Altos del Calle Calle"
+    category = "Naturaleza y comunidad"
     text = ""
     url = "/noticias/comunicado1"
     button_text = "Ver más"

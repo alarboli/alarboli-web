@@ -37,6 +37,10 @@
 		{{ printf "<!--[if lte IE 8]><script src=\"%s\"></script><link rel=\"stylesheet\" href=\"%s\" /><![endif]-->" $ieJs.RelPermalink $ieStyles.RelPermalink | safeHTML }}
 		{{ $style := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS | minify | fingerprint }}
 		<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="screen" crossorigin="anonymous" />
+		{{ if .IsHome }}
+		{{ $homeNews := resources.Get "css/home-news.css" | minify | fingerprint }}
+		<link rel="stylesheet" href="{{ $homeNews.RelPermalink }}" integrity="{{ $homeNews.Data.Integrity }}" crossorigin="anonymous" />
+		{{ end }}
 		{{ range .Site.Params.customCSS -}}
 			
     		<link rel="stylesheet" href="{{ . | absURL }}">

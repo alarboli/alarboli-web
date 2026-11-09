@@ -82,40 +82,7 @@
 
 						
 					
-					<div class="container">
-						<h2 class="news-title">Novedades</h2>
-						{{ if .Params.Feature_images.enable }}
-						{{ $tiles := .Params.Feature_images.tile }}
-						{{ $len := (len $tiles) }}
-						<a name="feature-images"></a>
-						<div class="row margin-icons" >
-							{{ range $index, $key := $tiles }}
-								<div class="col-6 col-12-narrower">
-									<section class="box special">
-										<span class="image featured"><a href="{{ $key.url | absURL }}"><img src="{{ $key.image | absURL}}" alt="" /></span></a>
-										<h3>{{ $key.title }}</h3>
-										<p>{{ $key.text | markdownify }}</p>
-										{{ if $key.button_text }}
-											<ul class="actions special">
-												<li><a href="{{ $key.url | absURL }}" class="button alt">{{ $key.button_text }}</a></li>
-											</ul>
-											{{ end }}
-										</section>
-									</div>
-									{{ if and (mod $index 2) (lt (add $index 1) $len) }}
-										</div>
-										<div class="row">
-									{{ end }}
-							{{ end }} {{/* end range $tiles*/}}
-										</div>
-										<div style="display: flex; justify-content: center;">
-											<a class="button alt" href="/noticias">Ver más noticias </a>
-			
-										</div>
-												
-					{{ end }} {{/* end if Feature_images*/}}
-
-				</div>	
+					{{ partial "home-news" . }}
 				
 					
 				

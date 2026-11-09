@@ -1,0 +1,30 @@
+{{ if and .Params.Feature_images.enable .Params.Feature_images.tile }}
+<section id="feature-images" class="home-news container" aria-labelledby="home-news-title">
+  <header class="home-news-heading">
+    <p class="home-news-eyebrow">Actualidad ALARBOLÍ</p>
+    <h2 id="home-news-title">Novedades</h2>
+    <p class="home-news-intro">Encuentros y experiencias para crecer en comunidad.</p>
+  </header>
+  <div class="home-news-grid">
+    {{ range .Params.Feature_images.tile }}
+    {{ $article := site.GetPage .url }}
+    {{ $title := .title }}
+    {{ if .display_title }}{{ $title = .display_title }}{{ end }}
+    {{ $link := .url | relURL }}
+    {{ with $article }}{{ $link = .RelPermalink }}{{ end }}
+    <article class="home-news-story">
+      <a class="home-news-photo" href="{{ $link }}" aria-label="Leer noticia: {{ $title }}">
+        <img src="{{ .image | relURL }}" alt="{{ $title }}" loading="lazy" decoding="async" width="800" height="600" />
+      </a>
+      <div class="home-news-copy">
+        {{ with .category }}<p class="home-news-category">{{ . }}</p>{{ end }}
+        <h3><a href="{{ $link }}">{{ $title }}</a></h3>
+        {{ with .text }}<div class="home-news-summary">{{ . | markdownify }}</div>{{ end }}
+        <a class="home-news-read" href="{{ $link }}" aria-label="Leer noticia: {{ $title }}">Leer noticia <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+  <footer class="home-news-footer"><a class="home-news-all" href="{{ "/noticias/" | relURL }}">Ver todas las noticias <span aria-hidden="true">→</span></a></footer>
+</section>
+{{ end }}
