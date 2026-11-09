@@ -1,4 +1,4 @@
-baseURL = "https://www.alarboli.org/"
+baseURL = "https://alarboli.cl/"
 languageCode = "en-us"
 title = "Alarbolí"
 theme = ["alpha-church"]
@@ -48,11 +48,6 @@ enableInlineShortcodes = true
     weight = 2
     parent = "Sobre ALARBOLÍ"
   
-  [[menu.main]]
-    name = "Sobre ALARBOLÍ"
-    url = "#"
-    weight = 1
-
   #[[menu.main]]
   #  name = "Quienes somos"
   #  parent = "Nosotros"
@@ -147,8 +142,9 @@ enableInlineShortcodes = true
     #
     #If you use php, you need to host this site on a Server capable of running php.
     # Please edit the /static/contact_mail.php file from the exampleSite.
-    service = "php" #or "formspree" or "php"
-    confirm_page = "/contact_thanks" #only used by netlify
+    service = "formsubmit"
+    mail = "alarbolilosrios@gmail.com"
+    confirm_page = "/contact_thanks/"
     # formspree_formid="" #only used by formspree
 
 
